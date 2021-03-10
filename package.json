@@ -10,8 +10,7 @@
   "license": "Apache-2.0",
   "author": "Stanislav Senotrusov",
   "main": "./main.js",
-  "bin": {
-  },
+  "bin": {},
   "repository": "storycomputer/storycomputer",
   "scripts": {
     "start": "electron-forge start",
@@ -20,7 +19,8 @@
     "make": "electron-forge make"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "sqlite3": "5.0.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
