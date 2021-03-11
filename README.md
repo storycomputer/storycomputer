@@ -15,18 +15,12 @@ limitations under the License.
 -->
 # Story Computer
 
-## Known issues
-
-1. sqlite3 package version is fixed to 5.0.0, as 5.0.2 gaves us compilation error on Windows.
-
-
 ## Local development
 
 ```
 npm install
 npm start
 ```
-
 
 ## Produce a release
 
