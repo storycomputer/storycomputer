@@ -22,7 +22,7 @@ npm install
 npm start
 ```
 
-## Produce a release
+## Build a release
 
 ```
 npm run make
