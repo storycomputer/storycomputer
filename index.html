@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
 Copyright 2021 Stanislav Senotrusov <stan@senotrusov.com>
 
@@ -13,23 +14,19 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-# Story Computer
-
-## Local development
-
-```
-npm install
-npm start
-```
-
-## Testing
-
-```
-npm test
-```
-
-## Build a release
-
-```
-npm run make
-```
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Story Computer</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body style="background: white;">
+  <div class="about-version">
+    <script>document.write(`${process.env.npm_package_name} ${process.env.npm_package_version},
+    node ${process.versions.node},
+    sqlite ${require('sqlite3').VERSION},
+    Chrome ${process.versions.chrome},
+    and Electron ${process.versions.electron}`);</script>
+  </div>
+</body>
+</html>
