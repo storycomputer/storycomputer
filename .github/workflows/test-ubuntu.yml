@@ -23,5 +23,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-    - run: sudo apt install xvfb
-    - run: DISPLAY=:42 xvfb-run --server-num 42 npm test
+    - if: ${{ matrix.os == 'ubuntu-latest' }}
+      run: sudo apt install xvfb
+    - if: ${{ matrix.os == 'ubuntu-latest' }}
+      run: DISPLAY=:42 xvfb-run --server-num 42 npm test
