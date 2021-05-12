@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Ubuntu test CI
 
 on:
   push:
@@ -9,15 +9,11 @@ on:
 jobs:
   build:
     timeout-minutes: 10
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        include:
-          - os: ubuntu-latest
-          - os: macos-latest
-          - os: windows-latest
-        node-version: [12.x, 14.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
