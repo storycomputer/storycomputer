@@ -1,4 +1,4 @@
-name: macOS CI tests
+name: CI tests on macOS
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: Windows CI tests
+name: CI tests on Ubuntu
 
 on:
   push:
@@ -8,8 +8,8 @@ on:
 
 jobs:
   build:
-    timeout-minutes: 15
-    runs-on: windows-latest
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
