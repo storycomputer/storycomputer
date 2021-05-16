@@ -12,8 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const assert = require('assert');
-const sqlite3 = require('sqlite3').verbose();
+import assert from 'assert';
+import sqlite3 from 'sqlite3';
+
+if (process.env.NODE_ENV === 'test')
+  sqlite3.verbose();
 
 describe('Test sqlite module', function () {
   it('check JSON1 Extension', (done) => {
