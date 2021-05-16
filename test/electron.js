@@ -14,7 +14,7 @@
 
 const {Application} = require('spectron');
 const assert = require('assert');
-const electron = require('electron');
+const electronPath = require('electron');
 const path = require('path');
 
 describe('Launch Electron application', function () {
@@ -22,7 +22,7 @@ describe('Launch Electron application', function () {
 
   beforeEach(() => {
     this.app = new Application({
-      path: electron,
+      path: electronPath,
       args: [path.join(__dirname, '..')]
     });
     return this.app.start();
