@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const {app, BrowserWindow} = require('electron');
+import {app, BrowserWindow} from "electron";
 
 function createWindow () {
   const window = new BrowserWindow({

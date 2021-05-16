@@ -9,11 +9,13 @@
   "bugs": "https://github.com/storycomputer/storycomputer/issues",
   "license": "Apache-2.0",
   "author": "Stanislav Senotrusov",
-  "main": "./main.js",
+  "main": "./dist/main.js",
   "bin": {},
   "repository": "storycomputer/storycomputer",
   "scripts": {
-    "start": "electron-forge start",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "npm run build && electron-forge start",
     "test": "cross-env NODE_ENV=test mocha",
     "package": "electron-forge package",
     "make": "electron-forge make"
@@ -31,7 +33,8 @@
     "cross-env": "^7.0.3",
     "electron": "^11.0.3",
     "mocha": "^8.4.0",
-    "spectron": "^13.0.0"
+    "spectron": "^13.0.0",
+    "typescript": "^4.2.4"
   },
   "config": {
     "forge": {
