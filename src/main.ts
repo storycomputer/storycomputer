@@ -30,11 +30,13 @@ function createWindow () {
 
 app.whenReady().then(createWindow);
 
+// Quick if all app windows are closed, but not on macOS
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin')
     app.quit();
 })
 
+// On macOS, create a new window if dock icon is clicked and no other app windows are open.
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0)
     createWindow();
