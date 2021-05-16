@@ -13,16 +13,16 @@
 # limitations under the License.
 
 # Ignore the code which is outside of scope of this module
-node_modules
+/node_modules
 
 # Ignore the package produced by `npm pack`
-*.tgz
+/*.tgz
 
 # Ignore test logs
-*.log
+/*.log
 
 # Ignore build artifacts
-out
+/out
 
 # Ignore translated code
-dist
+/dist
