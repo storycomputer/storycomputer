@@ -14,11 +14,11 @@
   "repository": "storycomputer/storycomputer",
   "scripts": {
     "build": "tsc",
-    "watch": "tsc --watch",
+    "make": "electron-forge make",
+    "package": "electron-forge package",
     "start": "npm run build && electron-forge start",
     "test": "cross-env NODE_ENV=test mocha",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
+    "watch": "tsc --watch"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
