@@ -42,6 +42,7 @@
   "config": {
     "forge": {
       "packagerConfig": {
+        "name": "storycomputer-desktop",
         "ignore": [
           "^/.github$",
           "^/.gitignore$",
@@ -56,7 +57,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "storycomputer"
+            "name": "storycomputer-desktop"
           }
         },
         {
