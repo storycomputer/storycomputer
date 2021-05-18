@@ -1,17 +1,17 @@
 {
-  "name": "storycomputer",
+  "name": "@storycomputer/desktop",
   "version": "0.0.1",
-  "description": "Story Computer",
+  "description": "Story Computer Desktop",
   "keywords": [
     "storycomputer"
   ],
-  "homepage": "https://github.com/storycomputer/storycomputer",
-  "bugs": "https://github.com/storycomputer/storycomputer/issues",
+  "homepage": "https://github.com/storycomputer/desktop",
+  "bugs": "https://github.com/storycomputer/desktop/issues",
   "license": "Apache-2.0",
   "author": "Stanislav Senotrusov",
   "main": "./dist/main.js",
   "bin": {},
-  "repository": "storycomputer/storycomputer",
+  "repository": "storycomputer/desktop",
   "scripts": {
     "build": "tsc",
     "make": "electron-forge make",
