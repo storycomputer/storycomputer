@@ -41,7 +41,17 @@
   },
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "ignore": [
+          "^/.github$",
+          "^/.gitignore$",
+          "^/.mocharc.json$",
+          "^/src$",
+          "^/storycomputer-desktop.code-workspace$",
+          "^/test$",
+          "^/tsconfig.json$"
+        ]
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
