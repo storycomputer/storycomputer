@@ -16,7 +16,7 @@
     "build": "tsc",
     "make": "electron-forge make",
     "package": "electron-forge package",
-    "start": "electron-forge start",
+    "start": "npm run build && electron-forge start",
     "test": "cross-env NODE_ENV=test mocha",
     "watch": "tsc --watch",
     "clean": "shx rm -rf dist out tmp && npm prune",
