@@ -26,3 +26,6 @@
 
 # Ignore translated code
 /dist
+
+# Ignore temporary files
+/tmp

@@ -19,7 +19,7 @@
     "start": "electron-forge start",
     "test": "cross-env NODE_ENV=test mocha",
     "watch": "tsc --watch",
-    "clean": "shx rm -rf dist out",
+    "clean": "shx rm -rf dist out tmp && npm prune",
     "clean-start": "run-s clean build start"
   },
   "dependencies": {
