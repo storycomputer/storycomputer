@@ -17,8 +17,10 @@ limitations under the License.
 
 ## Local development
 
+You should have nodejs 14 installed.
+
 ```
-npm install
+git clone https://github.com/storycomputer/desktop.git storycomputer-desktop && cd storycomputer-desktop && npm install
 npm start
 ```
 
@@ -26,10 +28,4 @@ npm start
 
 ```
 npm test
-```
-
-## Build a release
-
-```
-npm run make
 ```
