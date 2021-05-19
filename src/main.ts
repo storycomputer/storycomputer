@@ -26,6 +26,7 @@ function createWindow () {
   });
 
   window.loadFile('index.html');
+  // window.webContents.openDevTools();
 }
 
 app.whenReady().then(createWindow);
