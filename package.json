@@ -19,6 +19,7 @@
     "start": "npm run build && electron-forge start",
     "test": "cross-env NODE_ENV=test mocha",
     "watch": "tsc --watch",
+    "clean-modules": "shx rm -rf node_modules",
     "clean": "shx rm -rf dist out tmp && npm prune",
     "clean-start": "run-s clean build start"
   },
