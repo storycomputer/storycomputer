@@ -19,13 +19,14 @@
     "clean": "shx rm -rf dist out tmp && npm prune",
     "make": "electron-forge make",
     "package": "electron-forge package",
+    "preinstall": "npx npm-force-resolutions",
     "start": "npm run build && electron-forge start",
     "test": "cross-env NODE_ENV=test mocha",
     "watch": "tsc --watch"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
-    "sqlite3": "5.0.0"
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
@@ -43,6 +44,9 @@
     "spectron": "^14.0.0",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
+  },
+  "resolutions": {
+    "node-addon-api": "3.1.0"
   },
   "config": {
     "forge": {
