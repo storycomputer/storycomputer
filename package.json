@@ -14,14 +14,14 @@
   "repository": "storycomputer/desktop",
   "scripts": {
     "build": "tsc",
+    "clean-modules": "shx rm -rf node_modules",
+    "clean-start": "run-s clean build start",
+    "clean": "shx rm -rf dist out tmp && npm prune",
     "make": "electron-forge make",
     "package": "electron-forge package",
     "start": "npm run build && electron-forge start",
     "test": "cross-env NODE_ENV=test mocha",
-    "watch": "tsc --watch",
-    "clean-modules": "shx rm -rf node_modules",
-    "clean": "shx rm -rf dist out tmp && npm prune",
-    "clean-start": "run-s clean build start"
+    "watch": "tsc --watch"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
