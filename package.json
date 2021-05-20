@@ -14,7 +14,7 @@
   "repository": "storycomputer/desktop",
   "scripts": {
     "build": "tsc",
-    "clean-modules": "shx rm -rf node_modules",
+    "clean-modules": "npx shx rm -rf node_modules/*",
     "clean-start": "run-s clean build start",
     "clean": "shx rm -rf dist out tmp && npm prune",
     "make": "electron-forge make",
