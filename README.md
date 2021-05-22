@@ -17,7 +17,7 @@ limitations under the License.
 
 ## Local development
 
-You should have nodejs 14 installed.
+You should have nodejs (preferably version 14, but do try with yours!) installed.
 
 ```
 git clone https://github.com/storycomputer/storycomputer-desktop.git
