@@ -5,13 +5,13 @@
   "keywords": [
     "storycomputer"
   ],
-  "homepage": "https://github.com/storycomputer/desktop",
-  "bugs": "https://github.com/storycomputer/desktop/issues",
+  "homepage": "https://github.com/storycomputer/storycomputer-desktop",
+  "bugs": "https://github.com/storycomputer/storycomputer-desktop/issues",
   "license": "Apache-2.0",
   "author": "Stanislav Senotrusov",
   "main": "./dist/main.js",
   "bin": {},
-  "repository": "storycomputer/desktop",
+  "repository": "storycomputer/storycomputer-desktop",
   "scripts": {
     "build": "tsc",
     "clean-modules": "npx shx rm -rf node_modules/*",
