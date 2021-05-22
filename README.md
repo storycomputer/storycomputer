@@ -20,8 +20,8 @@ limitations under the License.
 You should have nodejs 14 installed.
 
 ```
-git clone https://github.com/storycomputer/storycomputer-desktop.git && cd storycomputer-desktop && npm install
-npm start
+git clone https://github.com/storycomputer/storycomputer-desktop.git
+cd storycomputer-desktop && npm install && npm start
 ```
 
 ## Testing
