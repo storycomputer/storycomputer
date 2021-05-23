@@ -37,4 +37,8 @@ describe('Launch Electron application', function () {
   it('show application window', async () => {
     assert.strictEqual(await this.app.client.getWindowCount(), 1);
   });
+
+  it('verify sqlite works in renderer', async () => {
+    await this.app.client.waitUntilTextExists('#sqliteTestResult', 'sqlite works');
+  });
 });

@@ -13,16 +13,16 @@
   "bin": {},
   "repository": "storycomputer/storycomputer-desktop",
   "scripts": {
-    "build": "tsc",
+    "build-watch": "webpack --watch",
+    "build": "webpack",
     "clean-modules": "npx shx rm -rf node_modules/*",
     "clean-start": "run-s clean build start",
-    "clean": "shx rm -rf dist out tmp && npm prune",
+    "clean": "npm prune && shx rm -rf dist out tmp",
     "make": "electron-forge make",
     "package": "electron-forge package",
     "preinstall": "npx npm-force-resolutions",
-    "start": "npm run build && electron-forge start",
-    "test": "cross-env NODE_ENV=test mocha",
-    "watch": "tsc --watch"
+    "start": "electron-forge start",
+    "test": "cross-env NODE_ENV=test NODE_TEST_ENV=true mocha"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
@@ -42,8 +42,13 @@
     "npm-run-all": "^4.1.5",
     "shx": "^0.3.3",
     "spectron": "^14.0.0",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^9.2.2",
     "ts-node": "^9.1.1",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "resolutions": {
     "node-addon-api": "3.1.0"

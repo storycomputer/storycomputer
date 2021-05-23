@@ -12,7 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {app, BrowserWindow} from "electron";
+import {app, BrowserWindow} from 'electron';
+
+const isProduction = process.env.NODE_ENV === 'production';
+const isTest = process.env.NODE_TEST_ENV === 'true'; // can't use NODE_ENV here because webpack bakes the compile-time NODE_ENV value into the translated output
 
 function createWindow () {
   const window = new BrowserWindow({
@@ -21,12 +24,14 @@ function createWindow () {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-      enableRemoteModule: (process.env.NODE_ENV === 'test') // this is here just for the spectron test https://github.com/electron-userland/spectron/issues/720
+      enableRemoteModule: isTest // this is here for the spectron test https://github.com/electron-userland/spectron/issues/720
     }
   });
 
   window.loadFile('index.html');
-  // window.webContents.openDevTools();
+
+  if (!isTest && !isProduction)
+    window.webContents.openDevTools();
 }
 
 app.whenReady().then(createWindow);
