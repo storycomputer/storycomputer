@@ -15,7 +15,7 @@
 import assert from 'assert';
 import sqlite3 from 'sqlite3';
 
-if (process.env.NODE_ENV === 'test')
+if (process.env.NODE_TEST_ENV === 'true')
   sqlite3.verbose();
 
 describe('Test sqlite module', function () {
