@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import './versionDisplay';
-import './sqliteTest';
-import './imageTest';
+import exampleImage from './images/example.png';
+
+const output = document.createElement('img');
+output.src = exampleImage;
+document.body.appendChild(output);

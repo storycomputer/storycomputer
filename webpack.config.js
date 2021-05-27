@@ -23,8 +23,9 @@ const baseConfig = {
   },
   context: __dirname,
   output: {
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    publicPath: './dist/'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css']
@@ -39,6 +40,10 @@ const baseConfig = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
       }
     ]
   }
